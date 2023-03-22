@@ -1,1 +1,1 @@
-image.png
+install npm i
