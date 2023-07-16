@@ -1,14 +1,16 @@
+
+
 * {
   padding: 0;
-  margin:0;
-  /* box-sizing: border-box; */
+  margin: 0;
+  box-sizing: border-box;
 }
-html {
+
+html,body {
+width: 100%;
+height: 100%;
   font-family: "Montserrat", sans-serif;
-}
-body {
   background: #eee;
-  /* padding: 0 16px; */
 }
 
 header {
@@ -17,7 +19,7 @@ header {
   width: 100%;
   padding: 16px 32px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-  min-width: 500px;
+
 }
 
 header h1 {
@@ -28,34 +30,43 @@ header h1 {
 }
 
 footer {
-display: none;
+/* display: none; */
   position: fixed;
   text-align: center;
   bottom: 0;
   width: 100%;
 
   height: 2.5rem;
+  margin-top: 100px;
+
 }
 
 footer p {
+
   color: #ccc;
+ 
+  
 }
 .note {
+
   background: #fff;
   border-radius: 7px;
   box-shadow: 0 2px 5px #ccc;
   padding: 10px;
-  width: 240px;
+  width: 30%;
+  height: auto;
   margin: 16px;
   float: left;
+    z-index: 1;
 }
 .note h1 {
   font-size: 1.11em;
   margin-bottom: 6px;
 }
 .note p {
+position: relative;
   font-size: 1.1em;
-  margin-bottom: 10px;
+top:15px;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
@@ -79,7 +90,7 @@ footer p {
 
 form {
   position: relative;
-  width: 480px;
+  width: 40%;
   margin: 30px auto 20px auto;
   background: #fff;
   padding: 15px;
@@ -104,20 +115,60 @@ form button {
   color: #fff;
   border: none;
   border-radius: 50%;
-  width: 36px;
-  height: 36px;
+  width: 60px;
+  height: 60px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   outline: none;
 }
 
+@media screen and (max-width:960px){
 
-@media (max-width:486px)
- {
+.note
+{
+width: 29%;
+
+}
+}
+@media screen and (max-width:868px){
+
+.note
+{
+width: 50%;
+
+}
+
+}
+
+@media screen and (max-width:640px){
+form
+{
+width: 50%;
+}
   
-form {
+.note
+{
+width: 43%;
 
-  left: 20px;
+}
+
+}
+@media screen and (max-width:500px){
+
+form
+{
+width: 60%;
+}
+  
+.note {
+
+position: relative;
+    width: 80%;
+    margin: 20px auto;
+    left: 40px;
+
+
 
 }
 }
+

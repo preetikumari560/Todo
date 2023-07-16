@@ -48,6 +48,7 @@ function App() {
 
   return (
     <div>
+    
       <Header />
       <CreateArea addOn={addItem} />
       {items.map((element, index) => (
