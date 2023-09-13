@@ -9,8 +9,16 @@
 html,body {
 width: 100%;
 height: 100%;
+ background: #eee;
   font-family: "Montserrat", sans-serif;
-  background: #eee;
+    background-image: url("https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1776&q=80");
+
+ 
+
+  background-size: 100% 100%;   /*to fit background-image: ; */
+
+  background-attachment: fixed;
+  background-position: center;
 }
 
 header {
@@ -26,6 +34,7 @@ header h1 {
   color: #fff;
   font-family: "McLaren", cursive;
   font-weight: 200;
+  text-align: center;
 
 }
 
@@ -49,24 +58,23 @@ footer p {
 }
 .note {
 
+text-align: center;
   background: #fff;
   border-radius: 7px;
   box-shadow: 0 2px 5px #ccc;
   padding: 10px;
   width: 30%;
-  height: auto;
-  margin: 16px;
-  float: left;
-    z-index: 1;
+  height: 4rem;
+  margin: 27px auto;
+
+    /* z-index: 1; */
 }
-.note h1 {
-  font-size: 1.11em;
-  margin-bottom: 6px;
-}
+
 .note p {
+
 position: relative;
-  font-size: 1.1em;
-top:15px;
+  font-size: 1.1rem;
+top:10px;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
@@ -83,22 +91,23 @@ top:15px;
   border-radius: 50%;
   cursor: pointer;
   outline: none;
-  right: 7px;
-  bottom: -32px;
+  right: -3px;
+  bottom: 8px;
   padding: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 form {
   position: relative;
-  width: 40%;
+
+  width: 30%;
   margin: 30px auto 20px auto;
   background: #fff;
   padding: 15px;
   border-radius: 7px;
   box-shadow: 0 1px 5px rgb(138, 137, 137);
 }
-form input,
-form textarea {
+form input{
   width: 100%;
   border: none;
   padding: 4px;
@@ -106,6 +115,7 @@ form textarea {
   font-size: 1.2em;
   font-family: inherit;
   resize: none;
+  text-align: center;
 }
 form button {
   position: absolute;
@@ -132,43 +142,45 @@ width: 29%;
 }
 @media screen and (max-width:868px){
 
-.note
-{
-width: 50%;
-
-}
-
-}
-
-@media screen and (max-width:640px){
 form
 {
 width: 50%;
 }
-  
 .note
 {
-width: 43%;
+width: 50%;
 
 }
 
 }
+
+
 @media screen and (max-width:500px){
 
 form
 {
-width: 60%;
+width: 70%;
 }
   
+  form button
+  {
+    width: 50px;
+    height: 50px;
+  }
+
+  .note button
+
+  {
+    font-size: 0.7rem;
+  width: 50px;
+    height: 50px;
+
+  }
 .note {
 
 position: relative;
-    width: 80%;
-    margin: 20px auto;
-    left: 40px;
-
-
-
+    width: 70%;
+font-size: 1rem;
 }
 }
 

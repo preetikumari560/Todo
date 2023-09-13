@@ -1,30 +1,8 @@
 
-// import React from 'react'
-// import Header from "./header";
-// import Footer from "./footer";
-// import Note from "./note";
-// import NoteData from "../notes";
-
-// function App()
-// {
-//     return <div> 
-//     <Header />
-
-// {NoteData.map((data) => (
-//   <Note key={data.id} title={data.title} content={data.content} />
-// ))}
-// <Footer />
-//     </div>
-// }
-
-// export default App
-
-
 import React, { useState } from "react";
 import Header from "./Header";
-import Footer from "./Footer";
-import Note from "./Note";
-import CreateArea from "./CreateArea";
+import Task from "./Task";
+import CreateTask from "./CreateTask";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -50,9 +28,9 @@ function App() {
     <div>
     
       <Header />
-      <CreateArea addOn={addItem} />
+      <CreateTask addOn={addItem} />
       {items.map((element, index) => (
-        <Note
+        <Task
           key={index}
           id={index}
           title={element.title}
@@ -61,7 +39,6 @@ function App() {
         />
       ))}
 
-      <Footer />
     </div>
   );
 }
